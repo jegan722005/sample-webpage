@@ -1,0 +1,239 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+nav{
+    background-color: rgb(17, 228, 10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    width: 100%;
+    position: fixed;
+}
+nav > h4{
+    text-transform: capitalize;
+    font-weight:bold;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px -1px 3px white;
+}
+nav > ul{
+    display: flex;
+    gap: 40px;
+}
+nav > ul >li{
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+}
+nav > ul > li > a{
+    color: black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: -1px -1px 4px white;
+    text-decoration: none;
+}
+nav > ul >li::after{
+    content: "";
+    width:0%;
+    height: 2px;
+    background:linear-gradient(to left,red,yellow);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 1s ease-in;
+}
+nav > ul >li:hover::after{
+    width: 100%;
+}
+
+main{
+    height: 60vh;
+    background-color: rgba(34, 255, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main > .content{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.content > h1{
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    text-shadow: -1px -1px 4px black;
+    letter-spacing: 1px;
+    animation: typingText 3s ease-in infinite;
+    white-space: nowrap;
+    overflow: hidden;
+}
+@keyframes typingText {
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 24ch;
+    }
+    100%{
+        width: 0%;
+    }
+}
+.content > p{
+    text-align: justify;
+    padding-left: 50px;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+}
+.content > p::first-letter{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: red;
+}
+.content > p::selection{
+    color: white;
+    background-color: green;
+}
+.content > a{
+    width: 25%;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    background-color: rgba(20, 20, 240, 0.859);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    color: white;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 5px black;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.content > a:hover{
+    background-color: rgb(5, 5, 153);
+    transform: scale(1.05);
+}
+footer {
+    height: calc(100vh - 60vh);
+    background-color: black;
+    color: white;
+    display: flex;
+}
+footer > .contact{
+    flex-basis: 50%;
+    /* background-color: white;
+    color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+footer > .contact > h1{
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    text-shadow: 0px 0px 2px white;
+}
+/* footer > .contact > .loc{
+    border: 1px solid white;
+} */
+footer > .contact > .loc > p{
+    display: inline;
+    margin-top: 20px;
+    font-size: 18px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.contact > .loc >i{
+    font-size: 20px;
+    margin-right: 5px;
+    padding-right: 1px;
+    box-shadow: 1px 1px 10px rgb(90, 87, 87);
+    border-radius: 50%;
+}
+.contact > .loc > p > span{
+    display: block;
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.contact > .call{
+    display: flex;
+    gap: 10px;
+}
+.call > a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+.call > a:hover{
+    color: blue;
+}
+.contact > .mail > i{
+    font-size: 20px;
+    padding-left: 1px;
+}
+.contact > .mail > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.mail > a:hover{
+    color: blue;
+}
+footer > .about-company{
+    flex-basis: 50%;
+    display: grid;
+    grid-template-columns: 320px;
+    box-shadow: 1px 1px 5px wheat;
+    padding-left: 20px;
+}
+footer > .about-company > h1{
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 700;
+    text-shadow: 0px 0px 5px rgb(133, 123, 123);
+    align-content: center;
+}
+.about-company > p{
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.4rem;
+    letter-spacing: 1.010px;
+}
+.about-company > .media-icon{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.media-icon > a {
+    padding: 1px;
+    border-radius: 20% 10px;
+    background-color: rgba(54, 53, 53, 0.877);
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.74) ,1px 1px 5px rgba(255, 255, 255, 0.322);
+}
+.about-company > .media-icon > a > i{
+    color: rgba(155, 149, 149, 0.685);
+    font-size: 25px;
+    transition: color 1s ease-in;
+}
+.about-company > .media-icon > a:hover{
+   background-color: rgb(194, 5, 5);
+    cursor: pointer;
+    transform: scale(1.2);
+}

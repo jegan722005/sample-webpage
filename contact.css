@@ -1,0 +1,128 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+nav{
+    background-color: rgb(17, 228, 10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    width: 100%;
+    position: fixed;
+}
+nav > h4{
+
+    text-transform: capitalize;
+    font-weight:bold;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px -1px 3px white;
+}
+nav > ul{
+    display: flex;
+    gap: 40px;
+}
+nav > ul >li{
+    list-style: none;
+    text-transform: uppercase;
+    position: relative;
+}
+nav > ul > li > a{
+    font-weight: bold;
+    color: black;
+    text-shadow: -1px -1px 4px white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+nav > ul >li::after{
+    content: "";
+    width:0%;
+    height: 2px;
+    background:linear-gradient(to left,red,yellow);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all 1s ease-in;
+}
+nav > ul >li:hover::after{
+    width: 100%;
+}
+.contact-box{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.contact-box > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px -1px 1px white;
+    letter-spacing: 1px;
+}
+.contact-box > form{
+    width: 450px;
+    height: 60%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 14px black;
+}
+.contact-box > form > label{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-shadow: 0px 0px 1px black;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-indent: 10px;
+}
+form > input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    cursor: auto;
+}
+form > input:focus{
+    border-color:blue;
+}
+form > textarea{
+    display: block;
+    width: 100%;
+    height: calc(100% - 70%);
+    text-transform: capitalize;
+    border-radius: 6px;
+    border-width: 2px;
+    outline: none;
+}
+form > textarea:focus{
+    border-color: blue;
+}
+.contact-box > button{
+    width: 20%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(20, 20, 240, 0.859);
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+    text-shadow: -1px -1px 3px black;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.contact-box > button:hover{
+    background:linear-gradient(to right,rgb(41, 243, 41),rgb(5, 226, 5));
+    transform: scale(1.05);
+}
+
