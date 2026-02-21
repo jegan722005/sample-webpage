@@ -4,20 +4,19 @@
     box-sizing: border-box;
 }
 nav{
-    background-color: rgb(17, 228, 10);
+    background-color: rgba(0, 0, 0, 0.548);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
+    color: wheat;
     width: 100%;
     position: fixed;
 }
 nav > h4{
     text-transform: capitalize;
-    font-weight:bold;
     font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 1px -1px 3px white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 nav > ul{
     display: flex;
@@ -32,14 +31,14 @@ nav > ul > li > a{
     color: black;
     font-weight: bold;
     letter-spacing: 1px;
-    text-shadow: -1px -1px 4px white;
     text-decoration: none;
+    color: white;
 }
 nav > ul >li::after{
     content: "";
     width:0%;
     height: 2px;
-    background:linear-gradient(to left,red,yellow);
+    background:linear-gradient(black) 15px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -216,24 +215,55 @@ footer > .about-company > h1{
     line-height: 1.4rem;
     letter-spacing: 1.010px;
 }
-.about-company > .media-icon{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+
+.social-bar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
 }
-.media-icon > a {
-    padding: 1px;
-    border-radius: 20% 10px;
-    background-color: rgba(54, 53, 53, 0.877);
-    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.74) ,1px 1px 5px rgba(255, 255, 255, 0.322);
+
+.social {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background: #333;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-decoration: none;
+  transition: width 0.3s ease;
 }
-.about-company > .media-icon > a > i{
-    color: rgba(155, 149, 149, 0.685);
-    font-size: 25px;
-    transition: color 1s ease-in;
+
+.social i {
+  font-size: 22px;
+  z-index: 2;
 }
-.about-company > .media-icon > a:hover{
-   background-color: rgb(194, 5, 5);
-    cursor: pointer;
-    transform: scale(1.2);
+
+.social span {
+  position: absolute;
+  bottom: -100px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-weight: bold;
 }
+
+/* Hover effect */
+.social:hover {
+  width: 100px;
+}
+
+.social:hover span {
+  bottom: 1px;
+  opacity: 1;
+}
+
+/* Colors */
+.fb { background: #1877f2; }
+.gh { background: #5f5b5b; }
+.li { background: #0a66c2; }
+.wa { background: #25d366; }
